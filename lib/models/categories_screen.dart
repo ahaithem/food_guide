@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './dummy_data.dart';
-import './category_item.dart';
+import '../dummy_data.dart';
+import '../widgets/category_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
@@ -15,7 +15,7 @@ class CategoriesScreen extends StatelessWidget {
         padding: const EdgeInsets.all(25),
         children: DUMMY_CATEGORIES.map((catData) {
           // the map function wiil excute on every item on the DUMMY_CATEGORIES and use it on CategoryItem
-          return CategoryItem(catData.title, catData.color);
+          return CategoryItem(catData.id, catData.title, catData.color);
         }).toList(),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 200,
